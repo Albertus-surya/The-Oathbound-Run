@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://s6dbpyq3rx46"]
+
+[ext_resource type="Script" uid="uid://cm8cv0wgd3yrj" path="res://scripts/GameOver.gd" id="1_yxx3c"]
+[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/Background/background1.png" id="2_ccer4"]
+[ext_resource type="AudioStream" uid="uid://bejou07xrco58" path="res://assets/audio/22 - The Final of The Fantasy.wav" id="3_ccer4"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yxx3c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 657.0
+texture = ExtResource("2_ccer4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 156.0
+offset_right = 590.0
+offset_bottom = 187.0
+text = "You Fail"
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 244.0
+offset_right = 515.0
+offset_bottom = 275.0
+text = "retry"
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 243.0
+offset_right = 690.0
+offset_bottom = 274.0
+text = "main menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ccer4")
+volume_db = 8.0
+autoplay = true
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

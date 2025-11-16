@@ -1,19 +1,18 @@
-# Skrip Karakter Runner (LENGKAP DENGAN GRAVITY FLIP)
-# Versi ini 100% bersih dari karakter spasi ilegal.
 extends CharacterBody2D
 
 # === KONSTANTA & KECEPATAN ===
 const RUN_SPEED: float = 300.0
-const JUMP_FORCE: float = -400.0
+const JUMP_FORCE: float = -350.0
 const GRAVITY_DEFAULT: float = 1200.0
 const FLIP_BOOST: float = -200.0
 
-# === REFERENSI NODE (WAJIB SESUAI NAMA DI POHON SCENE) ===
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var col_stand: CollisionShape2D = $CollisionStand
 @onready var col_slide: CollisionShape2D = $CollisionSlide
 @onready var hitbox_col: CollisionShape2D = $HitboxArea/CollisionAttack
 @onready var double_tap_timer: Timer = $DoubleTapTimer
+@onready var sfx_jump: AudioStreamPlayer = $AudioJump
+@onready var sfx_attack: AudioStreamPlayer = $AudioAttack
 
 # === VARIABEL STATUS (STATE) ===
 var is_sliding: bool = false
@@ -29,7 +28,7 @@ func _ready():
 	col_slide.disabled = true
 	hitbox_col.disabled = true
 	
-	# Menghubungkan sinyal (WAJIB)
+	# Menghubungkan sinyal 
 	if not anim.animation_finished.is_connected(_on_animation_finished):
 		anim.animation_finished.connect(_on_animation_finished)
 		
@@ -86,6 +85,7 @@ func _physics_process(delta):
 
 func perform_jump():
 	velocity.y = JUMP_FORCE * gravity_direction
+	sfx_jump.play()
 
 func perform_gravity_flip():
 	gravity_direction *= -1
@@ -96,6 +96,7 @@ func perform_attack():
 	if is_attacking: return
 	is_attacking = true
 	hitbox_col.set_deferred("disabled", false)
+	sfx_attack.play()
 
 func start_slide():
 	if is_sliding: return
@@ -142,8 +143,10 @@ func die():
 	col_stand.set_deferred("disabled", true)
 	col_slide.set_deferred("disabled", true)
 	
-	# (Opsional) Putar animasi mati jika Anda punya
-	# anim.play("die") 
-	
 	await get_tree().create_timer(1.0).timeout
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://game_over.tscn")
+
+func _on_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene_to_file("res://finish_menu.tscn")
+	

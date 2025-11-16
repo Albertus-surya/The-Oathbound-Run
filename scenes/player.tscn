@@ -1,7 +1,9 @@
-[gd_scene load_steps=33 format=3 uid="uid://c4bb75mtri742"]
+[gd_scene load_steps=35 format=3 uid="uid://c4bb75mtri742"]
 
 [ext_resource type="Texture2D" uid="uid://yhp325xa0uj0" path="res://assets/adventurer-v1.5-Sheet.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cfog6olg1miu7" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://d16o0v2jkt3v1" path="res://assets/audio/jump.wav" id="3_dqkch"]
+[ext_resource type="AudioStream" uid="uid://ys8qyc8p8pp8" path="res://assets/audio/attack.wav" id="4_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -130,7 +132,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 8.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -227,9 +229,10 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_331ug")
-animation = &"jump"
+animation = &"attack"
 autoplay = "default"
-frame_progress = 0.9238535
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionStand" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -240,13 +243,24 @@ position = Vector2(1, 10)
 shape = SubResource("RectangleShape2D_ibah8")
 
 [node name="HitboxArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionAttack" type="CollisionShape2D" parent="HitboxArea"]
+light_mask = 4
 position = Vector2(10.5, 4)
 shape = SubResource("RectangleShape2D_3iwfv")
 
 [node name="DoubleTapTimer" type="Timer" parent="."]
 wait_time = 0.25
 one_shot = true
+
+[node name="AudioJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dqkch")
+volume_db = 10.0
+
+[node name="AudioAttack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qlg0r")
+volume_db = 8.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
