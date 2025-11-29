@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dst8hl2ig6538"
-path="res://.godot/imported/main_lev_buildB.png-b00ffd4e01d73a9006882d95080c7008.ctex"
+uid="uid://cnahvl8phhkjs"
+path="res://.godot/imported/Enemy3No-Move-Die.png-3708686b410a5dfc22ff3bf240a87f44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main_lev_buildB.png"
-dest_files=["res://.godot/imported/main_lev_buildB.png-b00ffd4e01d73a9006882d95080c7008.ctex"]
+source_file="res://assets/anggur_hutan/Enemy3No-Move-Die.png"
+dest_files=["res://.godot/imported/Enemy3No-Move-Die.png-3708686b410a5dfc22ff3bf240a87f44.ctex"]
 
 [params]
 

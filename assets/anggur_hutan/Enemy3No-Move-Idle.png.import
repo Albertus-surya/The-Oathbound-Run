@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw6uuffkhu4er"
-path="res://.godot/imported/background3.png-f9a5b30bdeb3a5d19885d5a12ef200c7.ctex"
+uid="uid://cn23afp41xksb"
+path="res://.godot/imported/Enemy3No-Move-Idle.png-79d413ef361882c5e39cd50710750d7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/background3.png"
-dest_files=["res://.godot/imported/background3.png-f9a5b30bdeb3a5d19885d5a12ef200c7.ctex"]
+source_file="res://assets/anggur_hutan/Enemy3No-Move-Idle.png"
+dest_files=["res://.godot/imported/Enemy3No-Move-Idle.png-79d413ef361882c5e39cd50710750d7d.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbp1ffr68ye4i"]
 
-[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/Background/background1.png" id="1_cmhrf"]
+[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/assets_level_1/Background/background1.png" id="1_cmhrf"]
 [ext_resource type="Script" uid="uid://dpq7447pde4xm" path="res://scripts/mainmenu.gd" id="1_d2nv2"]
 [ext_resource type="AudioStream" uid="uid://bejou07xrco58" path="res://assets/audio/22 - The Final of The Fantasy.wav" id="3_wgsso"]
 

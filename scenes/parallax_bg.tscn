@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bllurqtw3qb0q"]
 
-[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/Background/background1.png" id="1_4j2lk"]
-[ext_resource type="Texture2D" uid="uid://di07pkh2g234p" path="res://assets/Background/background2.png" id="2_bh54y"]
-[ext_resource type="Texture2D" uid="uid://dw6uuffkhu4er" path="res://assets/Background/background3.png" id="3_48ck1"]
-[ext_resource type="Texture2D" uid="uid://naftrjhhopbo" path="res://assets/Background/background4.png" id="4_w43qo"]
-[ext_resource type="Texture2D" uid="uid://ct0nya05c1unk" path="res://assets/Background/background5.png" id="5_spi1c"]
-[ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/Background/background6.png" id="6_6pvsh"]
+[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/assets_level_1/Background/background1.png" id="1_4j2lk"]
+[ext_resource type="Texture2D" uid="uid://di07pkh2g234p" path="res://assets/assets_level_1/Background/background2.png" id="2_bh54y"]
+[ext_resource type="Texture2D" uid="uid://dw6uuffkhu4er" path="res://assets/assets_level_1/Background/background3.png" id="3_48ck1"]
+[ext_resource type="Texture2D" uid="uid://naftrjhhopbo" path="res://assets/assets_level_1/Background/background4.png" id="4_w43qo"]
+[ext_resource type="Texture2D" uid="uid://ct0nya05c1unk" path="res://assets/assets_level_1/Background/background5.png" id="5_spi1c"]
+[ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/assets_level_1/Background/background6.png" id="6_6pvsh"]
 
 [node name="ParallaxBg" type="ParallaxBackground"]
 scroll_base_scale = Vector2(2, 2)

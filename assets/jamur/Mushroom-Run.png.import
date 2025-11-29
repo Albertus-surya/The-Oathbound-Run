@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct0nya05c1unk"
-path="res://.godot/imported/background5.png-446260ef3e7fe8b915e496749949e273.ctex"
+uid="uid://bsfubijhhjmiy"
+path="res://.godot/imported/Mushroom-Run.png-562d20fbe82f54ba21249d59d7bcd2a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/background5.png"
-dest_files=["res://.godot/imported/background5.png-446260ef3e7fe8b915e496749949e273.ctex"]
+source_file="res://assets/jamur/Mushroom-Run.png"
+dest_files=["res://.godot/imported/Mushroom-Run.png-562d20fbe82f54ba21249d59d7bcd2a2.ctex"]
 
 [params]
 
