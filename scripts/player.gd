@@ -142,9 +142,12 @@ func die():
 	
 	col_stand.set_deferred("disabled", true)
 	col_slide.set_deferred("disabled", true)
-	
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://game_over.tscn")
+
+	var tree = get_tree()   # <<< SIMPAN SCENETREE SEBELUM AWAIT
+	await tree.create_timer(1.0).timeout
+
+	if tree:   # <<< CEK SUPAYA TIDAK ERROR
+		tree.change_scene_to_file("res://game_over.tscn")
 
 func _on_body_entered(body):
 	if body.name == "Player":
