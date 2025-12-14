@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyk66a8kctyno"]
+[gd_scene load_steps=10 format=3 uid="uid://cyk66a8kctyno"]
 
 [ext_resource type="Script" uid="uid://b6i5tb33mk7w2" path="res://scripts/finish_menu.gd" id="1_mbpfk"]
+[ext_resource type="FontFile" uid="uid://bns6g1gfyax6k" path="res://assets/LowGothic_8x10_Regular.ttf" id="2_vuqvw"]
 [ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/assets_level_1/Background/background1.png" id="2_wf24x"]
 [ext_resource type="AudioStream" uid="uid://dvn4b4148hqp4" path="res://assets/audio/06 - Victory!.wav" id="3_wf24x"]
+[ext_resource type="Texture2D" uid="uid://di07pkh2g234p" path="res://assets/assets_level_1/Background/background2.png" id="4_7uixa"]
+[ext_resource type="Texture2D" uid="uid://dw6uuffkhu4er" path="res://assets/assets_level_1/Background/background3.png" id="5_vuqvw"]
+[ext_resource type="Texture2D" uid="uid://naftrjhhopbo" path="res://assets/assets_level_1/Background/background4.png" id="6_kx2ve"]
+[ext_resource type="Texture2D" uid="uid://ct0nya05c1unk" path="res://assets/assets_level_1/Background/background5.png" id="7_3y1qa"]
+[ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/assets_level_1/Background/background6.png" id="8_1hprv"]
 
 [node name="FinishMenu" type="Control"]
 layout_mode = 3
@@ -11,31 +17,125 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_mbpfk")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1155.0
-offset_bottom = 635.0
-texture = ExtResource("2_wf24x")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 524.0
 offset_top = 216.0
 offset_right = 588.0
 offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("2_vuqvw")
+theme_override_font_sizes/font_size = 25
 text = "You Win"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 510.0
-offset_top = 272.0
-offset_right = 611.0
-offset_bottom = 303.0
+offset_left = 518.0
+offset_top = 289.0
+offset_right = 619.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_vuqvw")
 text = "Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_wf24x")
 volume_db = 8.0
 autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wf24x")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wf24x")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_7uixa")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_7uixa")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_vuqvw")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_vuqvw")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_kx2ve")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_kx2ve")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("7_3y1qa")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("7_3y1qa")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("8_1hprv")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("8_1hprv")
+centered = false
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

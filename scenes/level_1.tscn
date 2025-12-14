@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dgnk6ndknvp20"]
+[gd_scene load_steps=22 format=4 uid="uid://dgnk6ndknvp20"]
 
 [ext_resource type="Texture2D" uid="uid://bmk01afydbfs5" path="res://assets/assets_level_1/main_lev_buildA.png" id="1_rus8k"]
 [ext_resource type="Texture2D" uid="uid://dst8hl2ig6538" path="res://assets/assets_level_1/main_lev_buildB.png" id="2_5xbjy"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/assets_level_1/Background/background6.png" id="13_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://ba5dh74f3nc3i" path="res://scenes/bat.tscn" id="14_2aecg"]
 [ext_resource type="AudioStream" uid="uid://bqavr8tol4vpu" path="res://assets/audio/bg_music.wav" id="15_6dial"]
+[ext_resource type="FontFile" uid="uid://bns6g1gfyax6k" path="res://assets/LowGothic_8x10_Regular.ttf" id="15_7nomh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
 texture = ExtResource("1_rus8k")
@@ -2080,7 +2081,7 @@ sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 distance = -116.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
-size = Vector2(36309, 61)
+size = Vector2(37017.5, 61)
 
 [node name="level_1" type="Node2D"]
 
@@ -2098,7 +2099,7 @@ tile_set = SubResource("TileSet_15mv3")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(147, -23)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.8, 1.8)
 limit_bottom = 170
 
 [node name="killzone" parent="." instance=ExtResource("4_5xbjy")]
@@ -2110,7 +2111,7 @@ shape = SubResource("WorldBoundaryShape2D_5xbjy")
 [node name="killzone2" parent="." instance=ExtResource("4_5xbjy")]
 
 [node name="CollisionShape2D(atas)" type="CollisionShape2D" parent="killzone2"]
-position = Vector2(18064, -200)
+position = Vector2(17706.75, -228)
 shape = SubResource("RectangleShape2D_5xbjy")
 
 [node name="runtuhan" type="Node" parent="."]
@@ -2168,7 +2169,8 @@ position = Vector2(35608, -97)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(2, -54)
+position = Vector2(-198, -52)
+motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(852, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -2177,7 +2179,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_7gny6")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(2, -54)
+position = Vector2(-198, -52)
+motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(852, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
@@ -2186,7 +2189,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("9_2aecg")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(2, -54)
+position = Vector2(-198, -52)
+motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(852, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
@@ -2195,7 +2199,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("10_6dial")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(2, -54)
+position = Vector2(-198, -52)
+motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(852, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
@@ -2204,7 +2209,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("11_7nomh")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(2, -54)
+position = Vector2(-198, -52)
+motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(852, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
@@ -2213,7 +2219,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("12_1s4pk")
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(2, -54)
+position = Vector2(-198, -52)
 motion_mirroring = Vector2(852, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
@@ -2402,6 +2408,7 @@ offset_left = 35405.0
 offset_top = -131.0
 offset_right = 35576.0
 offset_bottom = -108.0
+theme_override_fonts/font = ExtResource("15_7nomh")
 text = "mission accomplished"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

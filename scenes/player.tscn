@@ -219,7 +219,7 @@ animations = [{
 height = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibah8"]
-size = Vector2(26, 16)
+size = Vector2(26, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3iwfv"]
 size = Vector2(23, 28)
@@ -229,17 +229,15 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_331ug")
-animation = &"attack"
 autoplay = "default"
-frame = 5
-frame_progress = 1.0
+frame_progress = 0.045943704
 
 [node name="CollisionStand" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_ny14h")
 
 [node name="CollisionSlide" type="CollisionShape2D" parent="."]
-position = Vector2(1, 10)
+position = Vector2(1, 11)
 shape = SubResource("RectangleShape2D_ibah8")
 
 [node name="HitboxArea" type="Area2D" parent="."]

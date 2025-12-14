@@ -464,8 +464,8 @@ layer_1/tile_data = PackedInt32Array(65780, 262144, 8, 131316, 327680, 8, 196852
 position = Vector2(1, -4)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(135, -41)
-zoom = Vector2(1.5, 1.5)
+position = Vector2(135, -29)
+zoom = Vector2(1.8, 1.8)
 limit_top = -360
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

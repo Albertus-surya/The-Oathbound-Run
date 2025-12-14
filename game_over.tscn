@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://s6dbpyq3rx46"]
+[gd_scene load_steps=10 format=3 uid="uid://s6dbpyq3rx46"]
 
 [ext_resource type="Script" uid="uid://cm8cv0wgd3yrj" path="res://scripts/GameOver.gd" id="1_yxx3c"]
+[ext_resource type="FontFile" uid="uid://bns6g1gfyax6k" path="res://assets/LowGothic_8x10_Regular.ttf" id="2_3u7xm"]
 [ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/assets_level_1/Background/background1.png" id="2_ccer4"]
 [ext_resource type="AudioStream" uid="uid://bejou07xrco58" path="res://assets/audio/22 - The Final of The Fantasy.wav" id="3_ccer4"]
+[ext_resource type="Texture2D" uid="uid://di07pkh2g234p" path="res://assets/assets_level_1/Background/background2.png" id="4_fkf4o"]
+[ext_resource type="Texture2D" uid="uid://dw6uuffkhu4er" path="res://assets/assets_level_1/Background/background3.png" id="5_3u7xm"]
+[ext_resource type="Texture2D" uid="uid://naftrjhhopbo" path="res://assets/assets_level_1/Background/background4.png" id="6_woa3c"]
+[ext_resource type="Texture2D" uid="uid://ct0nya05c1unk" path="res://assets/assets_level_1/Background/background5.png" id="7_dd2jf"]
+[ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/assets_level_1/Background/background6.png" id="8_ku74v"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -11,18 +17,14 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_yxx3c")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1148.0
-offset_bottom = 657.0
-texture = ExtResource("2_ccer4")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 529.0
+offset_left = 504.0
 offset_top = 156.0
-offset_right = 590.0
+offset_right = 595.0
 offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("2_3u7xm")
+theme_override_font_sizes/font_size = 25
 text = "You Fail"
 
 [node name="RetryButton" type="Button" parent="."]
@@ -31,6 +33,7 @@ offset_left = 418.0
 offset_top = 244.0
 offset_right = 515.0
 offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("2_3u7xm")
 text = "retry"
 
 [node name="MainMenuButton" type="Button" parent="."]
@@ -39,12 +42,110 @@ offset_left = 593.0
 offset_top = 243.0
 offset_right = 690.0
 offset_bottom = 274.0
+theme_override_fonts/font = ExtResource("2_3u7xm")
 text = "main menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ccer4")
 volume_db = 8.0
 autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ccer4")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ccer4")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_fkf4o")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_fkf4o")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_3u7xm")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_3u7xm")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_woa3c")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_woa3c")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("7_dd2jf")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("7_dd2jf")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("8_ku74v")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("8_ku74v")
+centered = false
 
 [connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
