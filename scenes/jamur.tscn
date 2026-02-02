@@ -182,10 +182,12 @@ radius = 8.0
 script = ExtResource("1_v4tvr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_xuti2")
 autoplay = "default"
 
 [node name="Killzone_player" type="Area2D" parent="."]
+position = Vector2(0, -9)
 collision_layer = 8
 script = ExtResource("4_hnk7k")
 
@@ -194,6 +196,7 @@ position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_y6xrw")
 
 [node name="HurtBox" type="Area2D" parent="."]
+position = Vector2(0, -9)
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("5_ljcdt")

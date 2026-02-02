@@ -1,0 +1,298 @@
+[gd_scene load_steps=17 format=3 uid="uid://duvb43f46h03y"]
+
+[ext_resource type="Script" uid="uid://blfvl2re04k1l" path="res://scripts/levelmenu.gd" id="1_gfq3y"]
+[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/assets_level_1/Background/background1.png" id="1_us6ds"]
+[ext_resource type="Texture2D" uid="uid://di07pkh2g234p" path="res://assets/assets_level_1/Background/background2.png" id="2_7v4nc"]
+[ext_resource type="Texture2D" uid="uid://dw6uuffkhu4er" path="res://assets/assets_level_1/Background/background3.png" id="3_jrsw4"]
+[ext_resource type="Texture2D" uid="uid://naftrjhhopbo" path="res://assets/assets_level_1/Background/background4.png" id="4_4k5to"]
+[ext_resource type="Texture2D" uid="uid://ct0nya05c1unk" path="res://assets/assets_level_1/Background/background5.png" id="5_66civ"]
+[ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/assets_level_1/Background/background6.png" id="6_xogob"]
+[ext_resource type="FontFile" uid="uid://bns6g1gfyax6k" path="res://assets/LowGothic_8x10_Regular.ttf" id="7_7v4nc"]
+[ext_resource type="Texture2D" uid="uid://bjfkeeabrwq5n" path="res://assets/gambar_level/level1.jpg" id="8_jrsw4"]
+[ext_resource type="Texture2D" uid="uid://001v0gmjvhlj" path="res://assets/gambar_level/level_2.png" id="9_oq0wn"]
+[ext_resource type="Texture2D" uid="uid://bfa8nh724csgi" path="res://assets/gambar_level/level_3.png" id="10_aomel"]
+[ext_resource type="Texture2D" uid="uid://bj7431bmit4dc" path="res://assets/gambar_level/level4.png" id="11_71kk5"]
+[ext_resource type="Texture2D" uid="uid://dxsnfoch5eupf" path="res://assets/Locked.png" id="11_fpaci"]
+[ext_resource type="Texture2D" uid="uid://qyv5b7ruskxo" path="res://assets/gambar_level/level5.png" id="12_gfq3y"]
+[ext_resource type="Texture2D" uid="uid://ei8uj7m8nuwc" path="res://assets/Exit.png" id="15_x507c"]
+[ext_resource type="AudioStream" uid="uid://bejou07xrco58" path="res://assets/audio/22 - The Final of The Fantasy.wav" id="16_fpaci"]
+
+[node name="levelmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gfq3y")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("1_us6ds")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("1_us6ds")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_7v4nc")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_7v4nc")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("3_jrsw4")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("3_jrsw4")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_4k5to")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_4k5to")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_66civ")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_66civ")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_xogob")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_xogob")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 86.0
+offset_right = 641.0
+offset_bottom = 137.0
+theme_override_fonts/font = ExtResource("7_7v4nc")
+theme_override_font_sizes/font_size = 50
+text = "Levels"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 232.0
+offset_right = 1015.0
+offset_bottom = 362.0
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 5
+
+[node name="Level1_Btn" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_jrsw4")
+
+[node name="Label" type="Label" parent="GridContainer/Level1_Btn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 138.0
+offset_right = 125.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("7_7v4nc")
+theme_override_font_sizes/font_size = 12
+text = "Level 1: Dead Skies"
+
+[node name="Level2_Btn" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_oq0wn")
+
+[node name="Padlock" type="TextureRect" parent="GridContainer/Level2_Btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -30.5
+offset_right = 29.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_fpaci")
+
+[node name="Label" type="Label" parent="GridContainer/Level2_Btn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 138.0
+offset_right = 125.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("7_7v4nc")
+theme_override_font_sizes/font_size = 12
+text = "Level 2: Spore Grove"
+
+[node name="Level3_Btn" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_aomel")
+
+[node name="Padlock" type="TextureRect" parent="GridContainer/Level3_Btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -30.5
+offset_right = 29.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_fpaci")
+
+[node name="Label" type="Label" parent="GridContainer/Level3_Btn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 138.0
+offset_right = 125.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("7_7v4nc")
+theme_override_font_sizes/font_size = 12
+text = "Level 3: Mine Ruins"
+
+[node name="Level4_Btn" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("11_71kk5")
+
+[node name="Padlock" type="TextureRect" parent="GridContainer/Level4_Btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -30.5
+offset_right = 29.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_fpaci")
+
+[node name="Label" type="Label" parent="GridContainer/Level4_Btn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 138.0
+offset_right = 125.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("7_7v4nc")
+theme_override_font_sizes/font_size = 12
+text = "Level 4: Dark Void"
+
+[node name="Level5_Btn" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_gfq3y")
+
+[node name="Padlock" type="TextureRect" parent="GridContainer/Level5_Btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -30.5
+offset_right = 29.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_fpaci")
+
+[node name="Label" type="Label" parent="GridContainer/Level5_Btn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 138.0
+offset_right = 125.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("7_7v4nc")
+theme_override_font_sizes/font_size = 12
+text = "Level 5: Silent Sands"
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 53.0
+offset_right = 108.0
+offset_bottom = 93.0
+
+[node name="TextureRect" type="TextureRect" parent="back"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("15_x507c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_fpaci")
+autoplay = true
+
+[connection signal="pressed" from="GridContainer/Level1_Btn" to="." method="_on_level_1_btn_pressed"]
+[connection signal="pressed" from="GridContainer/Level2_Btn" to="." method="_on_level_2_btn_pressed"]
+[connection signal="pressed" from="GridContainer/Level3_Btn" to="." method="_on_level_3_btn_pressed"]
+[connection signal="pressed" from="GridContainer/Level4_Btn" to="." method="_on_level_4_btn_pressed"]
+[connection signal="pressed" from="GridContainer/Level5_Btn" to="." method="_on_level_5_btn_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

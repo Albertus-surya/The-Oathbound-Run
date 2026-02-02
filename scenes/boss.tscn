@@ -1,0 +1,152 @@
+[gd_scene load_steps=22 format=3 uid="uid://7xqf7qqws0oi"]
+
+[ext_resource type="Script" uid="uid://smemlx87w4c2" path="res://scripts/boss.gd" id="1_neq0i"]
+[ext_resource type="Texture2D" uid="uid://dxda7brranqx1" path="res://assets/forrest mage/forrest_mage_walkl.png" id="2_jncid"]
+[ext_resource type="Texture2D" uid="uid://b4f4756xsgtd4" path="res://assets/health bar/0.png" id="3_wqpjq"]
+[ext_resource type="Texture2D" uid="uid://botnioboxa6m4" path="res://assets/health bar/30.png" id="4_2cdgk"]
+[ext_resource type="Texture2D" uid="uid://cws8rgop53npb" path="res://assets/health bar/60.png" id="5_qsl3t"]
+[ext_resource type="Texture2D" uid="uid://c3udmaukyaaff" path="res://assets/health bar/100.png" id="6_2avx2"]
+[ext_resource type="AudioStream" uid="uid://b8tn6n6ujd5fh" path="res://assets/boss_sound.wav" id="7_2cdgk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnbj4"]
+atlas = ExtResource("2_jncid")
+region = Rect2(0, 0, 123, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3bxh"]
+atlas = ExtResource("2_jncid")
+region = Rect2(123, 0, 123, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqpjq"]
+atlas = ExtResource("2_jncid")
+region = Rect2(246, 0, 123, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cdgk"]
+atlas = ExtResource("2_jncid")
+region = Rect2(369, 0, 123, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsl3t"]
+atlas = ExtResource("2_jncid")
+region = Rect2(492, 0, 123, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2avx2"]
+atlas = ExtResource("2_jncid")
+region = Rect2(615, 0, 123, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5f346"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnbj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3bxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqpjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cdgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsl3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2avx2")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0onds"]
+radius = 14.0
+height = 70.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_neq0i"]
+size = Vector2(387, 133)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f346"]
+atlas = ExtResource("3_wqpjq")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0onds"]
+atlas = ExtResource("4_2cdgk")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfs1x"]
+atlas = ExtResource("5_qsl3t")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eiau"]
+atlas = ExtResource("6_2avx2")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vn2fc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f346")
+}],
+"loop": false,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0onds")
+}],
+"loop": false,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfs1x")
+}],
+"loop": false,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eiau")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[node name="boss" type="CharacterBody2D"]
+script = ExtResource("1_neq0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.9999943, -30)
+scale = Vector2(-1.4869798, 1.9890026)
+sprite_frames = SubResource("SpriteFrames_5f346")
+animation = &"run"
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_0onds")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(-22, 0)
+
+[node name="DetectionZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
+light_mask = 19
+position = Vector2(-183.5, -20.5)
+shape = SubResource("RectangleShape2D_neq0i")
+
+[node name="HealthBar" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -32)
+sprite_frames = SubResource("SpriteFrames_vn2fc")
+animation = &"3"
+
+[node name="SfxShoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_2cdgk")
+volume_db = 4.8

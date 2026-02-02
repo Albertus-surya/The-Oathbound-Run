@@ -29,12 +29,22 @@ text = "You Win"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 518.0
+offset_left = 420.0
 offset_top = 289.0
-offset_right = 619.0
+offset_right = 521.0
 offset_bottom = 320.0
 theme_override_fonts/font = ExtResource("2_vuqvw")
 text = "Main Menu"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 607.0
+offset_top = 289.0
+offset_right = 708.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_vuqvw")
+text = "next
+"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_wf24x")
@@ -139,3 +149,5 @@ texture = ExtResource("8_1hprv")
 centered = false
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button2_pressed"]

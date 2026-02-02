@@ -1,0 +1,323 @@
+[gd_scene load_steps=14 format=3 uid="uid://bilrrnsr8sgh7"]
+
+[ext_resource type="Script" uid="uid://tcj32n04w357" path="res://scripts/animasi.gd" id="1_483t5"]
+[ext_resource type="Texture2D" uid="uid://kerrdp8flfwr" path="res://assets/assets_level_1/Background/background1.png" id="1_y6mdu"]
+[ext_resource type="Texture2D" uid="uid://di07pkh2g234p" path="res://assets/assets_level_1/Background/background2.png" id="2_x0a0f"]
+[ext_resource type="Texture2D" uid="uid://dw6uuffkhu4er" path="res://assets/assets_level_1/Background/background3.png" id="3_kj2dj"]
+[ext_resource type="Texture2D" uid="uid://naftrjhhopbo" path="res://assets/assets_level_1/Background/background4.png" id="4_483t5"]
+[ext_resource type="Texture2D" uid="uid://ct0nya05c1unk" path="res://assets/assets_level_1/Background/background5.png" id="5_dvvot"]
+[ext_resource type="Texture2D" uid="uid://cjltj4vn30veq" path="res://assets/assets_level_1/Background/background6.png" id="6_qrh7i"]
+[ext_resource type="FontFile" uid="uid://bns6g1gfyax6k" path="res://assets/LowGothic_8x10_Regular.ttf" id="7_kj2dj"]
+[ext_resource type="Texture2D" uid="uid://cdbuv2rh4lvu4" path="res://assets/pecahan_batu_kesimbangan.png" id="7_x0a0f"]
+[ext_resource type="AudioStream" uid="uid://dvn4b4148hqp4" path="res://assets/audio/06 - Victory!.wav" id="10_dvvot"]
+
+[sub_resource type="Animation" id="Animation_dvvot"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("batu1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(545, -39)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("batu2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-92, 243)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("batu3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1258, 174)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("batu4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-87, 549)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("batu5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1232, 561)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_483t5"]
+resource_name = "batu"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("batu1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(545, -39), Vector2(518, 170)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("batu2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-92, 243), Vector2(510, 195)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("batu3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1258, 174), Vector2(545, 187)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("batu4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-87, 549), Vector2(510, 229)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("batu5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.0333333, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1232, 561), Vector2(548, 229)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.0666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qrh7i"]
+_data = {
+&"RESET": SubResource("Animation_dvvot"),
+&"batu": SubResource("Animation_483t5")
+}
+
+[node name="animasi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_483t5")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("1_y6mdu")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("1_y6mdu")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x0a0f")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x0a0f")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("3_kj2dj")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("3_kj2dj")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_483t5")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("4_483t5")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_dvvot")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("5_dvvot")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1704, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(0, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_qrh7i")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(852, -29)
+scale = Vector2(2, 2)
+texture = ExtResource("6_qrh7i")
+centered = false
+
+[node name="batu1" type="Sprite2D" parent="."]
+position = Vector2(545, -39)
+texture = ExtResource("7_x0a0f")
+region_enabled = true
+region_rect = Rect2(22.151485, 112.40305, 65.8929, 44.16227)
+
+[node name="batu2" type="Sprite2D" parent="."]
+position = Vector2(-92, 243)
+texture = ExtResource("7_x0a0f")
+region_enabled = true
+region_rect = Rect2(15.059299, 155.69687, 51.172153, 52.223633)
+
+[node name="batu3" type="Sprite2D" parent="."]
+position = Vector2(1258, 174)
+texture = ExtResource("7_x0a0f")
+region_enabled = true
+region_rect = Rect2(73.86703, 148.20184, 64.84147, 58.883057)
+
+[node name="batu4" type="Sprite2D" parent="."]
+position = Vector2(-87, 549)
+texture = ExtResource("7_x0a0f")
+region_enabled = true
+region_rect = Rect2(15.106918, 210.45337, 52.77841, 48.431946)
+
+[node name="batu5" type="Sprite2D" parent="."]
+position = Vector2(1232, 561)
+texture = ExtResource("7_x0a0f")
+region_enabled = true
+region_rect = Rect2(74.566345, 209.05217, 67.22388, 49.02733)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qrh7i")
+}
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 461.0
+offset_right = 884.0
+offset_bottom = 484.0
+theme_override_fonts/font = ExtResource("7_kj2dj")
+text = "When the fifth stone came together, the old history ended and a new legend began."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_dvvot")
+autoplay = true

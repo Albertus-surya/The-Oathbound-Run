@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cujlewgy6ttrk"]
+
+[ext_resource type="Texture2D" uid="uid://bxc5mkevd3rmp" path="res://assets/particle effect/Purple Effect and Bullet 16x16.png" id="2_6yftb"]
+[ext_resource type="Script" uid="uid://bvtthjvumt0te" path="res://scripts/death_effect.gd" id="2_koetp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_516on"]
+atlas = ExtResource("2_6yftb")
+region = Rect2(304, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koetp"]
+atlas = ExtResource("2_6yftb")
+region = Rect2(320, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yftb"]
+atlas = ExtResource("2_6yftb")
+region = Rect2(336, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db78l"]
+atlas = ExtResource("2_6yftb")
+region = Rect2(352, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pkby3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_516on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koetp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yftb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db78l")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="DeathEffect" type="AnimatedSprite2D"]
+position = Vector2(8, 0)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_pkby3")
+frame_progress = 1.0
+script = ExtResource("2_koetp")

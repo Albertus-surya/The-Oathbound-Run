@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bqg1g6j33723p"]
+
+[ext_resource type="Texture2D" uid="uid://yhp325xa0uj0" path="res://assets/adventurer-v1.5-Sheet.png" id="1_rdxq0"]
+
+[resource]
+atlas = ExtResource("1_rdxq0")
+region = Rect2(112.59347, 3.8815956, 23.460442, 34.472477)

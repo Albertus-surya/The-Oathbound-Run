@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://d3snitwpci4p7"]
+
+[ext_resource type="Texture2D" uid="uid://jm04ddyj5nsy" path="res://assets/adventurer-skin2t.png" id="1_3kscr"]
+
+[resource]
+atlas = ExtResource("1_3kscr")
+region = Rect2(112.41341, 2.3828545, 25.809128, 36.961212)
